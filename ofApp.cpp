@@ -4,10 +4,10 @@ ofEasyCam cam;
 std::vector<ofLight> lights;
 const int N = 10;
 const int max_cor = 3;
-string undeformed_source_name =  "./horse-gallop/horse-gallop-reference.obj" ;
+string undeformed_source_name =  "./horse-collapose/horse-collapose-reference.obj" ;
 string undeformed_target_name = "./data_gallop/camel_ref.obj";
-string deformed_source_name = "./horse-gallop/horse-gallop-";
-string deformed_target_name = "./camel-gallop-my/camel-gallop-";
+string deformed_source_name = "./horse-collapose/horse-collapose-";
+string deformed_target_name = "./camel-collapose-my/camel-collapose-";
 char  correspondence_name[30] = "./data_gallop/out.tricorrs";
 //string undeformed_source_name = "./data/un_src.obj";
 //string undeformed_target_name = "./data/un_tgt.obj";
@@ -33,7 +33,7 @@ void ofApp::setup(){
 	A.reserve(VectorXi::Constant(tot, 3));
 	cal_A(undeformed_target_mesh, A, Cor);
 	//printf(" %.10f %.10f %.10f \n", undeformed_target_mesh.vtx(0, 0), undeformed_target_mesh.vtx(0, 1), undeformed_target_mesh.vtx(0, 2));
-	int tot_num=48;
+	int tot_num=53;
 	//scanf("%d",tot_num);
 	for (int i = 0; i < tot_num; i++) {
 		printf("calculating %d now...\n",i);
